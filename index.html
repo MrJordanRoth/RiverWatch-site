@@ -41,7 +41,7 @@
     .tagline {
       font-size: 1.25rem;
       color: var(--text-sub);
-      max-width: 600px;
+      max-width: 650px;
       margin: 0 auto 30px;
     }
 
@@ -65,7 +65,7 @@
 
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
       margin: 40px 0;
     }
@@ -163,6 +163,11 @@
     footer a {
       color: var(--primary);
       text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -171,28 +176,32 @@
   <header>
     <div class="badge">Chrome Extension</div>
     <h1>RiverWatch</h1>
-    <p class="tagline">Real-time NOAA river stage tracking, flood level threshold monitoring, and automated weather hazard alerts right in your browser.</p>
+    <p class="tagline">Real-time NOAA river stage tracking, interactive hydrograph trend charts, flood threshold monitoring, and desktop hazard alerts in your browser.</p>
   </header>
 
   <div class="container">
     <div class="features-grid">
       <div class="feature-card">
-        <h3>Live NOAA Data</h3>
-        <p>Direct integration with National Water Prediction Service APIs to bring instantaneous river level gauge measurements to your browser badge.</p>
+        <h3>Interactive Hydrographs</h3>
+        <p>Smooth, High-DPI canvas charts with hover tooltips, dashed forecast curves, and 3D / 7D / 14D timeframe selector controls.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Dynamic Flood Stages</h3>
+        <p>Auto-extracts official NWS Action, Minor, Moderate, and Major flood thresholds directly onto the popup and chart backdrop.</p>
       </div>
       <div class="feature-card">
         <h3>Desktop Flood Alerts</h3>
-        <p>Instant notifications when river stations reach Action, Minor, Moderate, or Major flood stage levels or active NWS flood advisories.</p>
+        <p>Instant browser notifications when monitored stations cross flood thresholds or receive active NWS watches and warnings.</p>
       </div>
       <div class="feature-card">
-        <h3>Smart Switcher</h3>
-        <p>Seamlessly monitor primary gauges and switch between stored stations in seconds with theme-aware UI scaling.</p>
+        <h3>Multi-Gauge Switcher</h3>
+        <p>Store custom station labels and seamlessly switch between monitored river gauges directly from the extension header.</p>
       </div>
     </div>
 
     <div class="pricing-section">
       <h2>Select Your Plan</h2>
-      <p style="color: var(--text-sub);">Start free or unlock expanded monitoring with RiverWatch Pro.</p>
+      <p style="color: var(--text-sub);">Start free or unlock multi-station monitoring with RiverWatch Pro.</p>
 
       <div class="pricing-grid">
         <div class="pricing-card">
@@ -200,9 +209,12 @@
           <div class="price">$0 <span>/ forever</span></div>
           <ul class="pricing-features">
             <li>Monitor 1 River Gauge Station</li>
-            <li>Real-Time Badge Water Level</li>
-            <li>Desktop Flood Notifications</li>
-            <li>Dark & Light Theme Support</li>
+            <li>Interactive Hydrographs (3D / 7D / 14D)</li>
+            <li>Canvas Hover Tooltips & Forecast Curves</li>
+            <li>Real-Time Toolbar Badge Stage Height</li>
+            <li>Desktop Flood Notifications & 4-Hour Snooze</li>
+            <li>Dynamic Flood Stage Legend (Act / Min / Mod / Maj)</li>
+            <li>Dark, Light, & System Theme Support</li>
             <li>15-Minute Background Refresh</li>
           </ul>
         </div>
@@ -211,10 +223,12 @@
           <h2>RiverWatch Pro</h2>
           <div class="price">Pro Upgrade</div>
           <ul class="pricing-features">
-            <li><strong>Unlimited River Stations</strong></li>
+            <li><strong>Unlimited Monitored River Stations</strong></li>
             <li>Multi-Gauge Switcher & Storage</li>
+            <li>Custom Station Nicknames / Labels</li>
+            <li>Background Flood Alerts across ALL Saved Stations</li>
+            <li>Interactive Hydrographs for ALL Saved Stations</li>
             <li>All Free Features Included</li>
-            <li>Priority Polling Logic</li>
             <li>Future Premium Features Included</li>
           </ul>
         </div>
@@ -223,8 +237,12 @@
   </div>
 
   <footer>
+    <p style="margin-bottom: 12px;">
+      <a href="privacy.html">Privacy Policy</a> &bull; 
+      <a href="https://github.com/MrJordanRoth/RiverWatch-site/issues" target="_blank" rel="noopener">Support &amp; Issues</a>
+    </p>
     <p>RiverWatch is an independent browser extension providing public data sourced from NOAA and NWS. Not affiliated with or endorsed by NOAA.</p>
-    <p>&copy; RiverWatch. All rights reserved.</p>
+    <p>&copy; 2026 RiverWatch. All rights reserved.</p>
   </footer>
 
 </body>
