@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RiverWatch - Real-Time NOAA River Stage & Flood Alerts</title>
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text: #f8fafc;
+      --text-sub: #94a3b8;
+      --accent: #22c55e;
+      --border: #334155;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 20px 40px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .tagline {
+      font-size: 1.25rem;
+      color: var(--text-sub);
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .badge {
+      background-color: rgba(2, 132, 199, 0.2);
+      color: #38bdf8;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 40px 0;
+    }
+
+    .feature-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px;
+    }
+
+    .feature-card h3 {
+      margin-top: 0;
+      color: #ffffff;
+      font-size: 1.15rem;
+    }
+
+    .feature-card p {
+      color: var(--text-sub);
+      font-size: 0.95rem;
+      margin-bottom: 0;
+    }
+
+    .pricing-section {
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+
+    .pricing-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px 24px;
+      position: relative;
+    }
+
+    .pricing-card.pro {
+      border-color: var(--primary);
+      box-shadow: 0 0 20px rgba(2, 132, 199, 0.2);
+    }
+
+    .pricing-card h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
+
+    .price {
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin: 15px 0;
+      color: #ffffff;
+    }
+
+    .price span {
+      font-size: 0.9rem;
+      color: var(--text-sub);
+      font-weight: normal;
+    }
+
+    .pricing-features {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      text-align: left;
+    }
+
+    .pricing-features li {
+      padding: 8px 0;
+      color: var(--text-sub);
+      font-size: 0.95rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .pricing-features li::before {
+      content: "✓ ";
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 20px;
+      text-align: center;
+      color: var(--text-sub);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="badge">Chrome Extension</div>
+    <h1>RiverWatch</h1>
+    <p class="tagline">Real-time NOAA river stage tracking, flood level threshold monitoring, and automated weather hazard alerts right in your browser.</p>
+  </header>
+
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>Live NOAA Data</h3>
+        <p>Direct integration with National Water Prediction Service APIs to bring instantaneous river level gauge measurements to your browser badge.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Desktop Flood Alerts</h3>
+        <p>Instant notifications when river stations reach Action, Minor, Moderate, or Major flood stage levels or active NWS flood advisories.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Smart Switcher</h3>
+        <p>Seamlessly monitor primary gauges and switch between stored stations in seconds with theme-aware UI scaling.</p>
+      </div>
+    </div>
+
+    <div class="pricing-section">
+      <h2>Select Your Plan</h2>
+      <p style="color: var(--text-sub);">Start free or unlock expanded monitoring with RiverWatch Pro.</p>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h2>RiverWatch Free</h2>
+          <div class="price">$0 <span>/ forever</span></div>
+          <ul class="pricing-features">
+            <li>Monitor 1 River Gauge Station</li>
+            <li>Real-Time Badge Water Level</li>
+            <li>Desktop Flood Notifications</li>
+            <li>Dark & Light Theme Support</li>
+            <li>15-Minute Background Refresh</li>
+          </ul>
+        </div>
+
+        <div class="pricing-card pro">
+          <h2>RiverWatch Pro</h2>
+          <div class="price">Pro Upgrade</div>
+          <ul class="pricing-features">
+            <li><strong>Unlimited River Stations</strong></li>
+            <li>Multi-Gauge Switcher & Storage</li>
+            <li>All Free Features Included</li>
+            <li>Priority Polling Logic</li>
+            <li>Future Premium Features Included</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>RiverWatch is an independent browser extension providing public data sourced from NOAA and NWS. Not affiliated with or endorsed by NOAA.</p>
+    <p>&copy; RiverWatch. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
