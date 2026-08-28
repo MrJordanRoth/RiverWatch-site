@@ -30,34 +30,60 @@
     }
 
     .container {
-      max-width: 720px;
+      max-width: 760px;
       margin: 0 auto;
       padding: 40px 20px;
     }
 
     header {
       text-align: center;
-      margin-bottom: 36px;
+      margin-bottom: 28px;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .logo-title img {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
     }
 
     h1 {
       font-size: 2.4rem;
-      margin-bottom: 8px;
+      margin: 0;
       color: var(--accent);
     }
 
     p.subtitle {
       font-size: 1.1rem;
       color: var(--text-sub);
-      margin-top: 0;
+      margin-top: 6px;
     }
 
     .card {
       background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 10px;
+      border-radius: 12px;
       padding: 24px;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-card {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .hero-card img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
     .privacy-card {
@@ -102,6 +128,20 @@
       color: #ffffff;
     }
 
+    .showcase-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 12px;
+    }
+
+    .showcase-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
     ul {
       padding-left: 20px;
       margin-bottom: 0;
@@ -142,10 +182,18 @@
 <body>
   <div class="container">
     <header>
-      <h1>RiverWatch 🌊</h1>
+      <div class="logo-title">
+        <img src="icon128.png" alt="RiverWatch Logo">
+        <h1>RiverWatch</h1>
+      </div>
       <p class="subtitle">Near real-time NOAA river stage levels, streamflow rates, and 3-day trend charts in your Chrome toolbar.</p>
       <a href="https://mrjordanroth.github.io/RiverWatch-site/" class="btn" target="_blank" rel="noopener noreferrer">View on GitHub</a>
     </header>
+
+    <!-- Main Feature Promo Banner -->
+    <div class="card hero-card">
+      <img src="RiverWatch-margueepromo.jpg" alt="RiverWatch Real-time NOAA Water Data Banner">
+    </div>
 
     <!-- Overview Section -->
     <div class="card">
@@ -162,6 +210,16 @@
         <li><strong>Flow & Threshold Metrics:</strong> Discharge rates (kcfs) and official flood stages (Action, Minor, Moderate, Major).</li>
         <li><strong>Custom Station Selection:</strong> Monitor any 5-character NWSLI gauge in the United States.</li>
       </ul>
+    </div>
+
+    <!-- Interface & Screenshots Showcase Section -->
+    <div class="card">
+      <h2>Extension Preview</h2>
+      <p style="font-size: 0.95rem; color: var(--text-sub);">Clean interface supporting light and dark themes alongside easy station selection.</p>
+      <div class="showcase-grid">
+        <img src="RiverWatch-smallpromo.jpg" alt="Light and Dark Mode Preview">
+        <img src="RiverWatch-screenshot.jpg" alt="Full Extension Screenshots Grid">
+      </div>
     </div>
 
     <!-- Privacy Policy Section (Anchor Target) -->
@@ -189,7 +247,7 @@
       <p>&copy; 2026 RiverWatch. Independent open-source tool.</p>
       <p>
         <a href="#privacy">Privacy Policy</a> &bull; 
-        <a href="https://github.com/MrJordanRoth/RiverWatch-site/issues" target="_blank" rel="noopener noreferrer">Report an Issue / Feedback</a> &bull; 
+        <a href="https://github.com/MrJordanRoth/RiverWatch-site/issues" target="_blank" rel="noopener noreferrer">Report an Issue / Feedback</a> &bull;
       </p>
     </footer>
   </div>
