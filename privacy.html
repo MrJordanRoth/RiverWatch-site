@@ -1,30 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>RiverWatch - Privacy Policy</title>
-  <style>
-    body { font-family: sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #1e293b; }
-    h1 { color: #0284c7; }
-    h2 { margin-top: 24px; font-size: 1.2em; color: #334155; }
-  </style>
-</head>
-<body>
-  <h1>Privacy Policy for RiverWatch</h1>
-  <p>Last updated: August 24, 2026</p>
+# Privacy Policy for RiverWatch
 
-  <h2>Data Collection & Storage</h2>
-  <p>RiverWatch does not collect, track, transmit, or sell any personal user data. All configuration preferences (such as monitored station codes, custom threshold values, alert preferences, and UI theme selections) are saved locally in your browser using <code>chrome.storage</code>.</p>
+**Effective Date:** August 2026
 
-  <h2>Third-Party Services</h2>
-  <p>To retrieve live hydrologic data and manage optional Pro tier accounts, RiverWatch communicates with the following external endpoints:</p>
-  <ul>
-    <li><strong>NOAA Water Prediction Service (api.water.noaa.gov):</strong> Fetches observed river stage levels, flow rates, forecast points, and station metadata.</li>
-    <li><strong>National Weather Service (api.weather.gov):</strong> Fetches active flood watches, warnings, and weather advisories for gauge coordinates.</li>
-    <li><strong>ExtensionPay & Stripe (extensionpay.com):</strong> Handles secure account verification and payment processing for RiverWatch Pro. Payment card data is processed directly by Stripe and is never seen or stored by RiverWatch.</li>
-  </ul>
+**1. Overview**
+RiverWatch is committed to protecting user privacy. RiverWatch does not collect, store, track, transmit, or share any personal information, sensitive user data, browsing history, or analytics.
 
-  <h2>Contact</h2>
-  <p>If you have questions regarding this privacy policy or need support, please <a href="https://github.com/MrJordanRoth/RiverWatch-site/issues" target="_blank">open an issue on GitHub</a>.</p>
-</body>
-</html>
+**2. Data Usage & Local Storage**
+* **Local Preferences:** RiverWatch saves your selected station code (e.g., `WLGW2`) and appearance theme locally using Chrome's standard `chrome.storage` API. This data remains strictly on your device and is never sent to external servers or third parties.
+* **Public NOAA API Requests:** The extension makes network requests directly to public National Oceanic and Atmospheric Administration (NOAA) endpoints (`https://api.water.noaa.gov/*`) solely to fetch real-time river stage levels, streamflow metrics, and flood threshold metadata. No personal identifiers or tracking telemetry are included with these API requests.
+
+**3. Third-Party Code & Analytics**
+RiverWatch contains no advertising, tracking scripts, telemetry, remote code, or third-party analytics.
+
+**4. Contact Information**
+If you have questions regarding this Privacy Policy, please open an issue on our GitHub repository: https://github.com/MrJordanRoth/RiverWatch
